@@ -1,0 +1,181 @@
+/*##########################################################
+Overflow
+
+File: template.css
+Description: Stylesheet
+Author: Karlisson de Macedo Bezerra
+E-mail: theanimage@gmail.com
+License: This CSS file is part of the Overflow game, 
+which is licensed under the General Public License version 3.
+#############################################################*/
+
+* { padding:0; margin: 0; border: none; }
+
+body {
+    font: normal normal normal 11px/1 Arial, Sans-serif;
+    background: #000;
+    color: #000;
+}
+
+#screen {
+    background: url(bg/space4.jpg) repeat center center;
+    position: absolute;
+    overflow: hidden;
+    width: 900px;
+    height: 600px;
+    top: 50%;
+    left: 50%; 
+    margin-left: -450px;
+    margin-top: -300px;
+}
+
+/*---------TELA DE ENTRADA---------*/
+#splash {}
+    #title {
+        background: url(img/splash.png) no-repeat center center;
+        width: 900px;
+        height: 350px;
+    }
+
+    #options {
+   	  background: url(img/options.png) no-repeat top center;
+        width: 280px;
+        margin: 0 auto;
+        height: 200px;
+        padding: 0 10px;
+    }
+        #jogar,
+        #info {
+            width: 140px;
+            height: 200px;
+            float: left;
+        }
+
+#pause {
+    background: url(img/pause.png) no-repeat center center;
+    width: 300px;
+    height: 100px;
+    display: none;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    margin-left: -150px;
+    margin-top: -50px;
+}
+
+#game {
+    width: 900px;
+    height: 600px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#panel {
+    background: url(img/panel.png) top center no-repeat;
+    position: absolute;
+    padding-top: 10px;
+    z-index: 120;
+    width: 900px;
+    height: 60px;
+    top: 0;
+    left: 0;
+}
+
+#panel input { font-size: 30px; font-weight: bold; padding-top: 2px; }
+
+#power {
+    background: url(img/power_icon.png) center left no-repeat;
+    margin: 0 30px 0 20px;
+    padding-left: 35px;
+    height: 30px;
+    float: left;
+    width: 75px;
+}
+
+#ammo {
+    background: url(img/ammo_icon.png) center left no-repeat;
+    margin: 0 30px 0 10px;
+    padding-left: 35px;
+    height: 30px;
+    float: left;
+    width: 70px;
+}
+
+#score {
+    background: url(img/score_icon.png) center left no-repeat;
+    margin: 0 30px 0 20px;
+    padding-left: 35px;
+    height: 30px;
+    float: left;
+    color: #036;
+    width: 90px;
+}
+
+#logger {
+    background: #000;
+    border: 1px solid #333;
+    font-size: 12px;
+    font-weight: bold;
+    overflow:hidden; 
+    color: #FFF;
+    float: left;
+    width: 300px;
+    height: 25px;
+    padding: 5px;
+}
+
+/*Area do jogo*/
+#area {
+    clip: rect(0px, 900px, 600px, 0px);
+    position: absolute;
+    overflow: hidden;
+    height: 600px;
+    width: 900px;
+    top: 50px;
+    left: 0;
+}
+
+.ship {
+    background: url(img/ship.png) no-repeat center center;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+}
+
+/*---Bullets-------------------------------------------*/
+.laser {
+    background: url(img/laser.png) top left no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+}
+
+.plasma {
+    background: #FF0 url(img/plasma.png) top left no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 10px;
+}
+
+
+/*---Aliens--------------------------------------------*/
+.bug {
+    background: transparent url(img/alien1.png);
+    position: absolute;
+    width: 60px;
+    height: 35px;
+}
+
+.hooper {
+    background: transparent url(img/alien2.png);
+    position: absolute;
+    width: 84px;
+    height: 45px;
+}
+
+
+/*Decoration-------------------------------------------*/
+.blink { text-decoration: blink; }
